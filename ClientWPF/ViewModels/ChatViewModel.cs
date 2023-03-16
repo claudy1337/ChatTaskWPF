@@ -103,11 +103,10 @@ namespace ClientWPF.ViewModels
             this.AllMessages = new ObservableCollection<TextMessage>();
             this.Users = new ObservableCollection<string>();
 
-            // Invokes the Register method on the server
             this.Proxy.Invoke("Register", this.UserName);
 
-            // Subscribes to the broadcastMessage method on the server. 
-            // The OnBroadCastMessage method will be raised everytime the Send method on the server is invoked.
+            
+            
             this.Proxy.On("broadcastMessage", (string from, string message) => this.OnBroadCastMessage(from, message));
 
             this.Proxy.On("usersLoggedIn", (string user) => this.OnUserLoggedIn(user));

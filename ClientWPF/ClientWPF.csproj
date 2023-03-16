@@ -84,6 +84,8 @@
     <Compile Include="Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MessageConverter.cs" />
+    <Compile Include="TextMessageModel.cs" />
     <Compile Include="ViewModels\ChatViewModel.cs" />
     <Compile Include="ViewModels\HubViewModel.cs" />
     <Page Include="Authorization.xaml">
